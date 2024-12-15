@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import { preconnect } from 'react-dom';
 
 function App() {
   let [counter,setCounter] = useState(15);
@@ -8,8 +9,11 @@ function App() {
     else setCounter(counter);
   }
   const decCounter=()=>{
-    if(counter-1>=0) setCounter(counter-1);
-    else setCounter(counter);
+    if(counter-2>=0){
+      setCounter(prevcounter => prevcounter-1);
+      setCounter(prevcounter =>prevcounter - 1);
+    }
+    else setCounter(precounter => precounter=0);
   }
   return (
     <>
