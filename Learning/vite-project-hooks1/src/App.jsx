@@ -10,8 +10,8 @@ function App() {
   }
   const decCounter=()=>{
     if(counter-2>=0){
-      setCounter(prevcounter => prevcounter-1);
-      setCounter(prevcounter =>prevcounter - 1);
+      setCounter(counter-2);
+      // setCounter(prevcounter =>prevcounter - 1);
     }
     else setCounter(precounter => precounter=0);
   }
